@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MEUCPD DEV | AI CyberSec & DevOps</title>
+
+  <meta
+    name="description"
+    content="Portfólio de cibersegurança, desenvolvimento, infraestrutura, cloud e automação."
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#home" class="brand">
+      <span>[</span> MEUCPD DEV <span>]</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#home">./home</a>
+      <a href="#sobre">./sobre</a>
+      <a href="#skills">./skills</a>
+      <a href="#projetos">./projetos</a>
+      <a href="#labs">./labs</a>
+      <a href="#tools">./tools</a>
+      <a href="#contato">./contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="status-badge">
+        <span class="pulse"></span>
+        SISTEMA ONLINE // SECURE AI INTERFACE ESTABLISHED
+      </div>
+
+      <p class="eyebrow">AI Cybersecurity • Dev • Infrastructure</p>
+
+      <h1 class="glitch" data-text="MEUCPD DEV">MEUCPD DEV</h1>
+
+      <h2 class="terminal-line">
+        &gt;&gt; <span id="typing"></span><span class="cursor">_</span>
+      </h2>
+
+      <p class="hero-description">
+        Portfólio técnico focado em segurança, desenvolvimento, automação,
+        cloud, monitoramento e infraestrutura real de produção.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projetos" class="btn primary">&gt; Ver Projetos</a>
+        <a href="#contato" class="btn secondary"># Contato</a>
+      </div>
+
+      <div class="stats">
+        <article>
+          <strong>Cyber</strong>
+          <span>Security Operations</span>
+        </article>
+
+        <article>
+          <strong>Dev</strong>
+          <span>Scripts & APIs</span>
+        </article>
+
+        <article>
+          <strong>Cloud</strong>
+          <span>AWS & Serviços</span>
+        </article>
+
+        <article>
+          <strong>Infra</strong>
+          <span>Linux / Windows</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="section-head">
+        <span class="section-tag">// ARQUIVO_001</span>
+        <h2>Sobre mim</h2>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <span></span>
+          <span></span>
+          <span></span>
+          <p>profile.sec</p>
+        </div>
+
+        <div class="terminal-body">
+          <p><span class="cmd">$ whoami</span></p>
+
+          <p>
+            Profissional de TI com atuação em cibersegurança, desenvolvimento,
+            automação e infraestrutura. Trabalho com ambientes Linux e Windows,
+            firewalls, VPNs, Active Directory, cloud, monitoramento, backups e
+            sustentação de ambientes críticos.
+          </p>
+
+          <p>
+            Meu foco é criar soluções práticas para proteger, monitorar e
+            otimizar ambientes reais de produção.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <span class="section-tag">// STACK_MAP</span>
+        <h2>Skills</h2>
+      </div>
+
+      <div class="grid four">
+        <article class="card">
+          <h3>Segurança</h3>
+
+          <ul>
+            <li>Firewall / pfSense</li>
+            <li>VPN / OpenVPN / Pritunl</li>
+            <li>Active Directory</li>
+            <li>Hardening Linux/Windows</li>
+            <li>Análise de logs</li>
+            <li>SIEM / Wazuh</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Infraestrutura</h3>
+
+          <ul>
+            <li>Proxmox / VMware</li>
+            <li>Linux Server</li>
+            <li>Windows Server</li>
+            <li>DNS / DHCP / AD</li>
+            <li>Backup e disaster recovery</li>
+            <li>Servidores críticos</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Dev & Automação</h3>
+
+          <ul>
+            <li>Python</li>
+            <li>PowerShell</li>
+            <li>Bash</li>
+            <li>APIs</li>
+            <li>Scripts de auditoria</li>
+            <li>Integrações</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Cloud & Observabilidade</h3>
+
+          <ul>
+            <li>AWS EC2 / RDS</li>
+            <li>Docker</li>
+            <li>Zabbix</li>
+            <li>Grafana</li>
+            <li>Alertas</li>
+            <li>Monitoramento 24/7</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="section-head">
+        <span class="section-tag">// DEPLOYED_PROJECTS</span>
+        <h2>Projetos</h2>
+      </div>
+
+      <div class="grid two">
+        <article class="project-card">
+          <div class="project-index">01</div>
+
+          <h3>Backup Intelligence Auditor</h3>
+
+          <p>
+            Auditoria de backups em Proxmox, Dropbox e Google Drive, com
+            relatórios HTML/CSV/JSON, identificação de VMs atrasadas, storages
+            críticos e tasks com erro.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Proxmox</span>
+            <span>Rclone</span>
+            <span>Backup</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-index">02</div>
+
+          <h3>Zabbix NOC Dashboard</h3>
+
+          <p>
+            Organização de hosts, grupos, triggers e dashboards para ambiente
+            multi-cliente, com foco em visibilidade operacional e alertas
+            relevantes.
+          </p>
+
+          <div class="tags">
+            <span>Zabbix</span>
+            <span>Grafana</span>
+            <span>NOC</span>
+            <span>Monitoring</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-index">03</div>
+
+          <h3>AWS ERP Secure Infrastructure</h3>
+
+          <p>
+            Arquitetura AWS com VPN, servidores Linux/Windows, Docker, SFTP e
+            RDS SQL Server para ambiente ERP protegido por acesso via VPN.
+          </p>
+
+          <div class="tags">
+            <span>AWS</span>
+            <span>EC2</span>
+            <span>RDS</span>
+            <span>VPN</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-index">04</div>
+
+          <h3>AD + Linux SSO Integration</h3>
+
+          <p>
+            Integração de servidores Linux ao domínio Active Directory com
+            Kerberos, SSSD, permissões sudo por grupo e autenticação centralizada.
+          </p>
+
+          <div class="tags">
+            <span>Linux</span>
+            <span>AD</span>
+            <span>Kerberos</span>
+            <span>SSSD</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="labs" class="section">
+      <div class="section-head">
+        <span class="section-tag">// LABS_WRITEUPS</span>
+        <h2>Labs & Write-ups</h2>
+      </div>
+
+      <div class="timeline">
+        <article>
+          <span>LAB_001</span>
+          <h3>Active Directory Linux Integration</h3>
+          <p>Kerberos + SSSD + sudo via grupos do domínio.</p>
+        </article>
+
+        <article>
+          <span>LAB_002</span>
+          <h3>pfSense Security Troubleshooting</h3>
+          <p>Análise de bloqueios, DNSBL, pfBlocker e tráfego web.</p>
+        </article>
+
+        <article>
+          <span>LAB_003</span>
+          <h3>Wazuh + Sysmon Detection</h3>
+          <p>Coleta de eventos Windows e criação de regras customizadas.</p>
+        </article>
+
+        <article>
+          <span>LAB_004</span>
+          <h3>Cloud VPN Architecture</h3>
+          <p>Acesso seguro a aplicações internas hospedadas na AWS.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <div class="section-head">
+        <span class="section-tag">// TOOLKIT</span>
+        <h2>Ferramentas</h2>
+      </div>
+
+      <div class="tools-grid">
+        <span>Linux</span>
+        <span>Windows Server</span>
+        <span>pfSense</span>
+        <span>Proxmox</span>
+        <span>Zabbix</span>
+        <span>Grafana</span>
+        <span>Docker</span>
+        <span>AWS</span>
+        <span>PowerShell</span>
+        <span>Python</span>
+        <span>Bash</span>
+        <span>GitHub</span>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact-section">
+      <div class="section-head">
+        <span class="section-tag">// OPEN_CHANNEL</span>
+        <h2>Contato</h2>
+      </div>
+
+      <div class="contact-card">
+        <p>
+          Interessado em segurança, automação, cloud ou infraestrutura?
+          Entre em contato.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:dev@meucpd.com.br">dev@meucpd.com.br</a>
+          <a href="https://github.com/dev" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>MEUCPD DEV © <span id="year"></span> // AI CyberSec Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
