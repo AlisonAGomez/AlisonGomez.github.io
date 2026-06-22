@@ -85,9 +85,9 @@
       <a href="#skills">./skills</a>
       <a href="#experiencia">./experiência</a>
       <a href="#projetos">./projetos</a>
-      <a href="#relatorios">./relatórios</a>
       <a href="#labs">./labs</a>
       <a href="#estudos">./estudos</a>
+      <a href="#automacoes">./automações</a>
       <a href="#formacao">./formação</a>
       <a href="#tools">./tools</a>
       <a href="#contato">./contato</a>
@@ -324,52 +324,6 @@
       </div>
     </section>
 
-
-    <section id="relatorios" class="section reports-section">
-      <div class="section-head reveal">
-        <span class="section-tag">// ARQUIVO_005</span>
-        <h2>Relatórios Técnicos</h2>
-        <p class="section-subtitle">
-          Catálogo de relatórios sanitizados, estudos de caso e documentações técnicas de resposta a incidente, segurança defensiva e automação.
-        </p>
-      </div>
-
-      <div class="reports-highlight reveal">
-        <article class="report-featured-card">
-          <div class="report-featured-meta">
-            <span>INCIDENT RESPONSE</span>
-            <span>ALTA / CRÍTICA</span>
-            <span>SANITIZADO</span>
-          </div>
-
-          <h3>Resposta a Incidente: Browser Hijacker / Banking Trojan via Extensão Chrome</h3>
-
-          <p>
-            Investigação de uma extensão maliciosa que se passava por “Receita Federal”, retornava após remoção manual e usava política/cloud policy do Chrome como mecanismo de persistência.
-          </p>
-
-          <div class="report-featured-points">
-            <span>Chrome User Data</span>
-            <span>Cloud Policy</span>
-            <span>Malware Analysis</span>
-            <span>MITRE ATT&CK</span>
-          </div>
-
-          <div class="project-links">
-            <a href="report.html?id=extensao-maliciosa-chrome">Ver estudo de caso</a>
-            <a href="reports.html">Ver todos os relatórios</a>
-          </div>
-        </article>
-
-        <aside class="reports-mini-panel">
-          <span>REPORTS_INDEX</span>
-          <strong>1</strong>
-          <p>relatório publicado</p>
-          <small>Estrutura preparada para adicionar novos casos via JSON.</small>
-        </aside>
-      </div>
-    </section>
-
     <section id="labs" class="section">
       <div class="section-head reveal"><span class="section-tag">// ARQUIVO_005</span><h2>Labs & Ambientes</h2><p class="section-subtitle">Ambientes práticos, laboratórios e projetos para pesquisa, automação e engenharia de segurança.</p></div>
       <div class="lab-grid">
@@ -385,17 +339,121 @@
     </section>
 
     <section id="estudos" class="section">
-      <div class="section-head reveal"><span class="section-tag">// ARQUIVO_006</span><h2>Análises & Estudos</h2><p class="section-subtitle">Pesquisas, análises técnicas e documentações de casos reais para fortalecer conhecimento e promover segurança.</p></div>
+      <div class="section-head reveal">
+        <span class="section-tag">// ARQUIVO_006</span>
+        <h2>Análises & Estudos</h2>
+        <p class="section-subtitle">
+          Pesquisas, relatórios sanitizados, análises técnicas e documentações de casos reais para fortalecer conhecimento e promover segurança.
+        </p>
+      </div>
+
       <div class="study-list">
-        <article class="reveal"><div class="study-meta"><span>2026.05.23</span><b>CONCLUÍDO</b></div><h3>Análise de phishing e e-mails suspeitos</h3><p>Investigação de campanha de phishing, análise de headers, URL maliciosa, técnicas de engenharia social e indicadores de comprometimento.</p><div class="tags"><span>Segurança</span><span>Incidente</span><span>E-mail</span></div></article>
-        <article class="reveal"><div class="study-meta"><span>2026.04.11</span><b>CONCLUÍDO</b></div><h3>Malware, extensão falsa e roubo de credenciais</h3><p>Estudo de extensão maliciosa para navegador, captura de credenciais, cookies de sessão, mitigação e recomendações de hardening.</p><div class="tags"><span>Segurança</span><span>Malware</span><span>Incidente</span></div></article>
-        <article class="reveal"><div class="study-meta"><span>2026.03.02</span><b>CONCLUÍDO</b></div><h3>Troubleshooting de VPN, firewall e conectividade</h3><p>Diagnóstico de falhas intermitentes em túnel VPN site-to-site, bloqueios em firewall, comandos úteis e fluxo de resolução aplicado.</p><div class="tags"><span>Infra</span><span>Conectividade</span><span>Firewall</span></div></article>
-        <article class="reveal"><div class="study-meta"><span>2026.01.18</span><b>CONCLUÍDO</b></div><h3>Auditoria de backups em ambiente multiempresa</h3><p>Revisão de políticas, retenção, testes de restauração, identificação de gaps e propostas de automação com alertas.</p><div class="tags"><span>Infra</span><span>Automação</span><span>Backup</span></div></article>
+        <article class="reveal featured-study-card">
+          <div class="study-meta">
+            <span>2026.05.26</span>
+            <b>INCIDENT RESPONSE</b>
+          </div>
+
+          <h3>Resposta a Incidente: Extensão Maliciosa no Chrome</h3>
+
+          <p>
+            Estudo de caso sanitizado sobre investigação de browser hijacker / banking trojan via extensão maliciosa no Google Chrome,
+            com análise de persistência por política/cloud policy, coleta de evidências, IOCs, contenção e mapeamento MITRE ATT&CK.
+          </p>
+
+          <div class="tags">
+            <span>SOC</span>
+            <span>Malware</span>
+            <span>Chrome</span>
+            <span>Cloud Policy</span>
+            <span>MITRE ATT&CK</span>
+          </div>
+
+          <div class="project-links">
+            <a href="report.html?id=extensao-maliciosa-chrome">Ver estudo de caso</a>
+            <a href="reports.html">Ver todos os estudos</a>
+          </div>
+        </article>
+
+        <article class="reveal">
+          <div class="study-meta">
+            <span>2026</span>
+            <b>SEGURANÇA</b>
+          </div>
+          <h3>Análise de phishing e e-mails suspeitos</h3>
+          <p>Investigação de mensagens suspeitas, análise de headers, URLs, engenharia social e indicadores para triagem de ameaças.</p>
+          <div class="tags"><span>Segurança</span><span>Incidente</span><span>E-mail</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="study-meta">
+            <span>2026</span>
+            <b>INFRA</b>
+          </div>
+          <h3>Troubleshooting de VPN, firewall e conectividade</h3>
+          <p>Diagnóstico de falhas em VPN, rotas, DNS, regras de firewall, bloqueios e comportamento de rede.</p>
+          <div class="tags"><span>Infra</span><span>Conectividade</span><span>Firewall</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="study-meta">
+            <span>2026</span>
+            <b>AUTOMAÇÃO</b>
+          </div>
+          <h3>Auditoria de backups em ambiente multiempresa</h3>
+          <p>Revisão de políticas, retenção, testes de restauração, identificação de gaps e propostas de automação com alertas.</p>
+          <div class="tags"><span>Infra</span><span>Automação</span><span>Backup</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="automacoes" class="section automations-section">
+      <div class="section-head reveal">
+        <span class="section-tag">// ARQUIVO_007</span>
+        <h2>Automações</h2>
+        <p class="section-subtitle">
+          Scripts, ferramentas internas e rotinas automatizadas para reduzir trabalho manual, auditar ambientes e apoiar operação de infraestrutura.
+        </p>
+      </div>
+
+      <div class="automation-home-grid">
+        <article class="automation-featured-card reveal">
+          <div class="report-featured-meta">
+            <span>PYTHON</span>
+            <span>APIs</span>
+            <span>BACKUP AUDIT</span>
+          </div>
+
+          <h3>Auditoria de Backups Proxmox / Dropbox</h3>
+
+          <p>
+            Automação para consolidar status de backups, identificar atrasos, revisar evidências e gerar relatórios operacionais para ambiente multiempresa.
+          </p>
+
+          <div class="report-featured-points">
+            <span>Proxmox API</span>
+            <span>Dropbox API</span>
+            <span>CSV/HTML/JSON</span>
+            <span>Validação semanal</span>
+          </div>
+
+          <div class="project-links">
+            <a href="automation.html?id=auditoria-backups-proxmox-dropbox">Ver detalhes</a>
+            <a href="automations.html">Ver todas as automações</a>
+          </div>
+        </article>
+
+        <aside class="reports-mini-panel reveal">
+          <span>AUTOMATIONS_INDEX</span>
+          <strong>4</strong>
+          <p>scripts mapeados</p>
+          <small>Estrutura preparada para adicionar novos scripts via JSON quando você subir os repositórios no GitHub.</small>
+        </aside>
       </div>
     </section>
 
     <section id="formacao" class="section">
-      <div class="section-head reveal"><span class="section-tag">// ARQUIVO_007</span><h2>Formação & Cursos</h2><p class="section-subtitle">Minha base acadêmica e certificações que fortalecem minha atuação em infraestrutura, segurança e tecnologia da informação.</p></div>
+      <div class="section-head reveal"><span class="section-tag">// ARQUIVO_008</span><h2>Formação & Cursos</h2><p class="section-subtitle">Minha base acadêmica e certificações que fortalecem minha atuação em infraestrutura, segurança e tecnologia da informação.</p></div>
       <div class="cert-grid">
         <article class="cert-card reveal"><div class="cert-status progress">EM ANDAMENTO</div><span class="cert-icon">🎓</span><h3>Bacharelado em Sistemas de Informação</h3><p>FHO — Fundação Hermínio Ometto</p><small>2023 - 2026</small><div class="tags"><span>Sistemas</span><span>Banco de Dados</span><span>TI</span></div></article>
         <article class="cert-card reveal"><div class="cert-status done">CONCLUÍDO / EM ANDAMENTO</div><span class="cert-icon">🌐</span><h3>Cisco Networking Academy</h3><p>Cursos e trilhas sobre redes, segurança cibernética, fundamentos de TI e infraestrutura.</p><small>2023 - Atual</small><div class="tags"><span>Redes</span><span>Cibersegurança</span><span>Infraestrutura</span></div></article>
@@ -405,7 +463,7 @@
     </section>
 
     <section id="tools" class="section">
-      <div class="section-head reveal"><span class="section-tag">// ARQUIVO_008</span><h2>Arsenal Técnico</h2><p class="section-subtitle">Ferramentas, tecnologias e plataformas que utilizo para projetar, proteger e otimizar ambientes e soluções.</p></div>
+      <div class="section-head reveal"><span class="section-tag">// ARQUIVO_009</span><h2>Arsenal Técnico</h2><p class="section-subtitle">Ferramentas, tecnologias e plataformas que utilizo para projetar, proteger e otimizar ambientes e soluções.</p></div>
       <div class="tool-categories">
         <article class="reveal"><h3><span>01</span> Infraestrutura</h3><div><span>Windows Server</span><span>Linux</span><span>Ubuntu</span><span>Debian</span><span>Proxmox VE</span><span>VMware</span><span>Docker</span><span>AD DS</span><span>Group Policy</span></div></article>
         <article class="reveal"><h3><span>02</span> Redes</h3><div><span>pfSense</span><span>MikroTik</span><span>Cisco</span><span>VPN</span><span>VLAN</span><span>DNS</span><span>DHCP</span><span>NAT</span><span>Firewall</span><span>Proxy</span></div></article>
