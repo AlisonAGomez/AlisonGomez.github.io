@@ -3060,3 +3060,72 @@ body {
     display: none !important;
   }
 }
+
+
+/* =========================================================
+   V18 - RELATÓRIO: TEXTO PROFISSIONAL E IMAGEM SEM CORTE
+========================================================= */
+
+.report-thumb {
+  height: 240px !important;
+  padding: 16px !important;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0, 170, 255, 0.12), transparent 36%),
+    rgba(1, 7, 16, 0.88) !important;
+}
+
+.report-thumb img,
+.report-list-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 0 !important;
+}
+
+.report-detail-cover-wrap {
+  width: 100% !important;
+  max-height: 460px !important;
+  padding: 18px !important;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(0, 170, 255, 0.10), transparent 36%),
+    rgba(1, 7, 16, 0.86) !important;
+  overflow: hidden !important;
+}
+
+.report-detail-cover {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 420px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.report-aside-card h3 {
+  text-transform: none !important;
+}
+
+.report-action-stack a {
+  text-align: center !important;
+}
+
+.report-empty {
+  line-height: 1.8 !important;
+}
+
+@media (max-width: 720px) {
+  .report-thumb {
+    height: 190px !important;
+    padding: 12px !important;
+  }
+
+  .report-detail-cover-wrap {
+    max-height: 300px !important;
+    padding: 12px !important;
+  }
+
+  .report-detail-cover {
+    max-height: 270px !important;
+  }
+}
