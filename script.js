@@ -1,3 +1,8 @@
+/* Remove /index.html da barra quando alguém entra pelo link completo */
+if (location.pathname.endsWith("/index.html")) {
+  history.replaceState(null, "", location.pathname.replace(/index\.html$/, "") + location.hash + location.search);
+}
+
 const typing = document.getElementById("typing");
 
 const phrases = [
@@ -44,7 +49,6 @@ if (typing) {
 }
 
 const year = document.getElementById("year");
-
 if (year) {
   year.textContent = new Date().getFullYear();
 }
@@ -84,12 +88,17 @@ if ("IntersectionObserver" in window && revealElements.length) {
   revealElements.forEach((element) => element.classList.add("visible"));
 }
 
-/* Canvas otimizado para não travar o site */
+/* Canvas otimizado:
+   - Home mantém animação mais bonita
+   - Páginas internas usam menos partículas para não travar
+   - 30 FPS para reduzir consumo
+*/
 const canvas = document.getElementById("matrixCanvas");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (canvas && !prefersReducedMotion) {
   const ctx = canvas.getContext("2d");
+  const isHome = Boolean(document.getElementById("typing"));
 
   let width;
   let height;
@@ -103,18 +112,20 @@ if (canvas && !prefersReducedMotion) {
     const isMobile = width < 720;
     const isMedium = width < 1200;
 
-    const amount = isMobile
-      ? 34
-      : isMedium
-        ? 54
-        : Math.min(Math.floor(width / 22), 78);
+    let amount;
+
+    if (isHome) {
+      amount = isMobile ? 42 : isMedium ? 68 : Math.min(Math.floor(width / 18), 105);
+    } else {
+      amount = isMobile ? 22 : isMedium ? 34 : 48;
+    }
 
     particles = Array.from({ length: amount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
       vx: (Math.random() - 0.5) * 0.24,
       vy: (Math.random() - 0.5) * 0.24,
-      size: Math.random() * 1.35 + 0.55
+      size: Math.random() * 1.45 + 0.55
     }));
   }
 
@@ -136,11 +147,11 @@ if (canvas && !prefersReducedMotion) {
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(0, 170, 255, 0.62)";
+      ctx.fillStyle = isHome ? "rgba(0, 170, 255, 0.72)" : "rgba(0, 170, 255, 0.48)";
       ctx.fill();
     }
 
-    const maxDistance = width < 720 ? 82 : 105;
+    const maxDistance = width < 720 ? 82 : isHome ? 118 : 90;
 
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -155,7 +166,7 @@ if (canvas && !prefersReducedMotion) {
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(0, 170, 255, ${0.12 * (1 - dist / maxDistance)})`;
+          ctx.strokeStyle = `rgba(0, 170, 255, ${0.15 * (1 - dist / maxDistance)})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -166,7 +177,6 @@ if (canvas && !prefersReducedMotion) {
   }
 
   window.addEventListener("resize", resizeCanvas);
-
   resizeCanvas();
   requestAnimationFrame(drawNetwork);
 } else if (canvas) {
@@ -193,18 +203,12 @@ if (preloader && preloaderBar && preloaderPercent && preloaderStatus) {
 
     const tick = setInterval(() => {
       value += Math.floor(Math.random() * 13) + 8;
-
-      if (value > 100) {
-        value = 100;
-      }
+      if (value > 100) value = 100;
 
       preloaderBar.style.width = value + "%";
       preloaderPercent.textContent = value + "%";
 
-      const bucket = Math.min(
-        loadMessages.length - 1,
-        Math.floor((value / 100) * loadMessages.length)
-      );
+      const bucket = Math.min(loadMessages.length - 1, Math.floor((value / 100) * loadMessages.length));
 
       if (bucket !== msgIndex || value === 100) {
         msgIndex = bucket;
