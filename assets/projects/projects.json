@@ -1,5 +1,133 @@
 [
   {
+    "id": "sinalyx",
+    "title": "Sinalyx — Análise de Logs de Firewall com IA",
+    "subtitle": "Projeto autoral/TCC para organizar, analisar e priorizar eventos de logs de firewall.",
+    "category": "Cybersecurity / Data Analysis",
+    "status": "Em desenvolvimento",
+    "date": "2026",
+    "summary": "Projeto voltado à análise automatizada de logs de firewall, com parser, agregação por janelas, criação de features, modelos de IA/ML, dashboard e base de estudo com logs reais de pfSense.",
+    "tags": [
+      "Python",
+      "pandas",
+      "Vue.js",
+      "PostgreSQL",
+      "TensorFlow",
+      "pfSense"
+    ],
+    "repository": "https://github.com/AlisonAGomez",
+    "documentation": "",
+    "details": {
+      "overview": "O Sinalyx busca melhorar o fluxo de análise de logs de firewall, apoiando analistas de redes e segurança na detecção de anomalias, priorização de eventos e investigação técnica.",
+      "problem": [
+        "Logs de firewall podem ter alto volume e dificultar priorização manual.",
+        "Eventos relevantes podem ficar misturados a ruídos operacionais.",
+        "Equipes de redes e segurança precisam de visualização, filtros e indicadores para acelerar triagem.",
+        "Ambientes com pfSense e regras complexas exigem histórico e padronização de análise."
+      ],
+      "architecture": [
+        "Parser de logs para transformar registros em dados estruturados.",
+        "Agregação por janelas de tempo para gerar contexto de tráfego.",
+        "Criação de features para apoiar análise estatística e modelos de IA/ML.",
+        "Dashboard web para consulta, filtros e interpretação dos eventos.",
+        "Base de estudo com logs reais de pfSense em ambiente controlado."
+      ],
+      "features": [
+        "Ingestão e normalização de logs.",
+        "Classificação e priorização de eventos.",
+        "Dashboard para análise técnica.",
+        "Estrutura preparada para evolução com modelos de detecção.",
+        "Apoio à investigação de anomalias e padrões de tráfego."
+      ],
+      "learning": [
+        "Tratamento de dados e engenharia de features.",
+        "Arquitetura web com API, banco e dashboard.",
+        "Aplicação de IA/ML em contexto de segurança defensiva.",
+        "Organização de projeto acadêmico com aplicação prática."
+      ]
+    }
+  },
+  {
+    "id": "auditoria-backups",
+    "title": "Automação de Auditoria de Backups",
+    "subtitle": "Automação para validar backups Dropbox e Proxmox em ambiente multiempresa.",
+    "category": "Automation / Infrastructure",
+    "status": "Case Técnico",
+    "date": "2026",
+    "summary": "Automação em Python para verificação de backups em Dropbox e Proxmox, com foco em reduzir tempo de auditoria, identificar pendências, validar evidências e apoiar rotinas operacionais.",
+    "tags": [
+      "Python",
+      "APIs",
+      "Proxmox",
+      "Dropbox",
+      "Backup",
+      "Automação"
+    ],
+    "repository": "https://github.com/AlisonAGomez",
+    "documentation": "",
+    "details": {
+      "overview": "Projeto de automação para auditoria operacional de backups de VMs, containers e arquivos, integrando evidências de Proxmox, Dropbox, rclone e relatórios técnicos.",
+      "problem": [
+        "Conferência manual de backups consumia tempo operacional.",
+        "Falhas de upload, atrasos e arquivos incompletos precisavam ser identificados com rapidez.",
+        "Ambientes multiempresa exigiam padronização e rastreabilidade.",
+        "Era necessário separar falha local de geração e falha de envio para nuvem."
+      ],
+      "features": [
+        "Auditoria de VMs e containers.",
+        "Auditoria de arquivos em nuvem.",
+        "Consulta de Proxmox via API.",
+        "Geração de relatórios HTML, CSV e JSON.",
+        "Classificação de status e pendências críticas."
+      ],
+      "learning": [
+        "Integração com APIs.",
+        "Automação operacional em Python.",
+        "Tratamento de dados para relatórios.",
+        "Criação de ferramenta para ambiente multiempresa."
+      ]
+    },
+    "detailUrl": "automation/?id=auditoria-backups-proxmox-dropbox"
+  },
+  {
+    "id": "beewatts",
+    "title": "BeeWatts — Aplicação Web para Energia Solar",
+    "subtitle": "Aplicação web para estimativa de necessidade de painéis solares com base no consumo mensal.",
+    "category": "Web Development",
+    "status": "Projeto acadêmico",
+    "date": "2025",
+    "summary": "Participação como desenvolvedor front-end em aplicação web para avaliação de necessidade de painéis solares com base no gasto mensal de energia.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "Django",
+      "PostgreSQL"
+    ],
+    "repository": "https://github.com/AlisonAGomez",
+    "documentation": "",
+    "details": {
+      "overview": "BeeWatts é uma aplicação web voltada à análise inicial de viabilidade de energia solar, usando informações de consumo para apoiar uma estimativa de painéis.",
+      "problem": [
+        "Usuários nem sempre sabem dimensionar uma solução solar inicial.",
+        "Informações de consumo precisam ser transformadas em uma estimativa compreensível.",
+        "A aplicação precisava apresentar uma experiência simples e direta."
+      ],
+      "features": [
+        "Interface web responsiva.",
+        "Formulários para entrada de dados de consumo.",
+        "Organização visual das informações.",
+        "Integração com backend e banco de dados."
+      ],
+      "learning": [
+        "Desenvolvimento front-end com HTML, CSS, Bootstrap e JavaScript.",
+        "Integração com Django e PostgreSQL.",
+        "Organização de interface para projeto acadêmico."
+      ]
+    }
+  },
+  {
     "id": "veonyx",
     "title": "VeoNyx — Aplicativo Mobile para Comunidades",
     "subtitle": "Projeto mobile-first de comunidades digitais com perfis globais e locais, posts, wikis, chats, loja estética e moderação comunitária.",
