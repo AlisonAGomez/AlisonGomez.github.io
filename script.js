@@ -44,6 +44,7 @@ if (typing) {
 }
 
 const year = document.getElementById("year");
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }
@@ -75,7 +76,7 @@ if ("IntersectionObserver" in window && revealElements.length) {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
 
   revealElements.forEach((element) => observer.observe(element));
@@ -83,31 +84,47 @@ if ("IntersectionObserver" in window && revealElements.length) {
   revealElements.forEach((element) => element.classList.add("visible"));
 }
 
+/* Canvas otimizado para não travar o site */
 const canvas = document.getElementById("matrixCanvas");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (canvas) {
+if (canvas && !prefersReducedMotion) {
   const ctx = canvas.getContext("2d");
 
   let width;
   let height;
-  let particles;
+  let particles = [];
+  let lastFrame = 0;
 
   function resizeCanvas() {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
 
-    const amount = Math.min(Math.floor(width / 11), 145);
+    const isMobile = width < 720;
+    const isMedium = width < 1200;
+
+    const amount = isMobile
+      ? 34
+      : isMedium
+        ? 54
+        : Math.min(Math.floor(width / 22), 78);
 
     particles = Array.from({ length: amount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: (Math.random() - 0.5) * 0.35,
-      size: Math.random() * 1.8 + 0.7
+      vx: (Math.random() - 0.5) * 0.24,
+      vy: (Math.random() - 0.5) * 0.24,
+      size: Math.random() * 1.35 + 0.55
     }));
   }
 
-  function drawNetwork() {
+  function drawNetwork(timestamp) {
+    if (timestamp - lastFrame < 33) {
+      requestAnimationFrame(drawNetwork);
+      return;
+    }
+
+    lastFrame = timestamp;
     ctx.clearRect(0, 0, width, height);
 
     for (const p of particles) {
@@ -119,23 +136,26 @@ if (canvas) {
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(0, 170, 255, 0.75)";
+      ctx.fillStyle = "rgba(0, 170, 255, 0.62)";
       ctx.fill();
     }
+
+    const maxDistance = width < 720 ? 82 : 105;
 
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const a = particles[i];
         const b = particles[j];
+
         const dx = a.x - b.x;
         const dy = a.y - b.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 120) {
+        if (dist < maxDistance) {
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(0, 170, 255, ${0.16 * (1 - dist / 120)})`;
+          ctx.strokeStyle = `rgba(0, 170, 255, ${0.12 * (1 - dist / maxDistance)})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -148,7 +168,9 @@ if (canvas) {
   window.addEventListener("resize", resizeCanvas);
 
   resizeCanvas();
-  drawNetwork();
+  requestAnimationFrame(drawNetwork);
+} else if (canvas) {
+  canvas.style.display = "none";
 }
 
 const preloader = document.getElementById("preloader");
@@ -170,13 +192,20 @@ if (preloader && preloaderBar && preloaderPercent && preloaderStatus) {
     let msgIndex = 0;
 
     const tick = setInterval(() => {
-      value += Math.floor(Math.random() * 9) + 4;
-      if (value > 100) value = 100;
+      value += Math.floor(Math.random() * 13) + 8;
+
+      if (value > 100) {
+        value = 100;
+      }
 
       preloaderBar.style.width = value + "%";
       preloaderPercent.textContent = value + "%";
 
-      const bucket = Math.min(loadMessages.length - 1, Math.floor((value / 100) * loadMessages.length));
+      const bucket = Math.min(
+        loadMessages.length - 1,
+        Math.floor((value / 100) * loadMessages.length)
+      );
+
       if (bucket !== msgIndex || value === 100) {
         msgIndex = bucket;
         preloaderStatus.textContent = loadMessages[msgIndex];
@@ -184,15 +213,16 @@ if (preloader && preloaderBar && preloaderPercent && preloaderStatus) {
 
       if (value >= 100) {
         clearInterval(tick);
+
         setTimeout(() => {
           preloader.classList.add("hide");
           document.body.classList.remove("loading");
-        }, 420);
+        }, 360);
       }
-    }, 130);
+    }, 105);
   }
 
   window.addEventListener("load", () => {
-    setTimeout(runPreloader, 180);
+    setTimeout(runPreloader, 150);
   });
 }

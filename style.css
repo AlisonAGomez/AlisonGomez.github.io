@@ -2248,3 +2248,396 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================
+   MENU, RESPONSIVIDADE, CARDS E PERFORMANCE
+========================================================= */
+
+#matrixCanvas {
+  opacity: 0.48 !important;
+}
+
+.noise {
+  opacity: 0.025 !important;
+}
+
+.scanline {
+  opacity: 0.55 !important;
+}
+
+.topbar {
+  min-height: 64px !important;
+  padding: 0 clamp(14px, 2vw, 24px) !important;
+}
+
+.nav {
+  gap: clamp(8px, 1vw, 16px) !important;
+}
+
+.nav a {
+  font-size: clamp(9px, 0.75vw, 12px) !important;
+}
+
+.reports-page {
+  width: min(1180px, calc(100% - 48px)) !important;
+  padding-top: 116px !important;
+}
+
+.reports-grid-page {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+
+.report-list-card {
+  min-width: 0 !important;
+  height: 100%;
+}
+
+.report-list-card img {
+  max-height: 245px;
+}
+
+.report-list-card-content {
+  padding: 26px !important;
+}
+
+.report-card-meta {
+  gap: 10px !important;
+}
+
+.report-tags {
+  gap: 9px !important;
+}
+
+.report-detail-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px) !important;
+  gap: 32px !important;
+  align-items: start !important;
+}
+
+.report-detail-panel,
+.report-detail-card,
+.report-aside-card {
+  border-radius: var(--radius) !important;
+}
+
+.report-detail-panel h1 {
+  font-size: clamp(34px, 4.3vw, 58px) !important;
+  overflow-wrap: anywhere;
+}
+
+.report-detail-card h2 {
+  font-size: clamp(32px, 4.2vw, 56px) !important;
+  line-height: 1.05 !important;
+}
+
+.study-list {
+  gap: 24px !important;
+}
+
+.featured-study-card {
+  border-color: rgba(0, 229, 255, 0.42) !important;
+}
+
+.automation-home-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 280px) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+
+.automation-featured-card {
+  min-width: 0 !important;
+}
+
+.automations-section .reports-mini-panel {
+  min-height: 230px;
+}
+
+.project-card:hover,
+.skill-panel:hover,
+.lab-card:hover,
+.cert-card:hover,
+.study-list article:hover,
+.tool-categories article:hover,
+.contact-links-vertical a:hover,
+.report-list-card:hover,
+.automation-featured-card:hover {
+  transform: translateY(-3px) !important;
+}
+
+.project-card,
+.skill-panel,
+.lab-card,
+.cert-card,
+.study-list article,
+.tool-categories article,
+.contact-links-vertical a,
+.report-list-card,
+.automation-featured-card {
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+.project-card,
+.skill-panel,
+.lab-card,
+.cert-card,
+.tool-categories article,
+.study-list article,
+.contact-terminal,
+.contact-links-vertical a,
+.about-file,
+.report-featured-card,
+.reports-mini-panel,
+.report-list-card,
+.report-detail-panel,
+.report-detail-card,
+.report-aside-card,
+.automation-featured-card {
+  box-shadow: 0 0 22px rgba(0, 170, 255, 0.12) !important;
+}
+
+.skill-panel,
+.lab-card,
+.cert-card,
+.tool-categories article,
+.contact-terminal,
+.contact-links-vertical a,
+.hero-panels article {
+  clip-path: none !important;
+  border-radius: var(--radius) !important;
+  overflow: hidden !important;
+}
+
+/* Landing com área fixa do texto digitando */
+.hero {
+  min-height: 100svh !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding-top: clamp(92px, 12vh, 132px) !important;
+  padding-bottom: clamp(60px, 8vh, 96px) !important;
+}
+
+.terminal-line {
+  width: min(100%, 1040px) !important;
+  height: 96px !important;
+  min-height: 96px !important;
+  max-height: 96px !important;
+  margin-top: 12px !important;
+  margin-bottom: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  font-size: clamp(22px, 3vw, 38px) !important;
+  line-height: 1.18 !important;
+  text-align: center !important;
+  white-space: normal !important;
+}
+
+#typing {
+  display: inline-block !important;
+  max-width: 880px !important;
+  overflow: hidden !important;
+  white-space: normal !important;
+  text-align: center !important;
+  letter-spacing: 2px !important;
+  line-height: 1.18 !important;
+}
+
+.cursor {
+  display: inline-block !important;
+  width: 18px !important;
+  margin-left: 6px !important;
+  flex: 0 0 auto !important;
+}
+
+.hero-description {
+  width: min(820px, 100%) !important;
+  min-height: 82px !important;
+  margin-top: 8px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  line-height: 1.75 !important;
+  text-align: center !important;
+}
+
+.hero-actions {
+  margin-top: 22px !important;
+}
+
+.hero-panels {
+  margin-top: 32px !important;
+}
+
+@media (max-width: 1280px) {
+  .reports-grid-page {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)) !important;
+    gap: 24px !important;
+  }
+
+  .report-detail-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .report-aside-card {
+    position: static !important;
+  }
+
+  .automation-home-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .automations-section .reports-mini-panel {
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 1400px), (max-height: 820px) {
+  .hero {
+    padding-top: 82px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 7.6vw, 96px) !important;
+  }
+
+  .terminal-line {
+    height: 88px !important;
+    min-height: 88px !important;
+    max-height: 88px !important;
+    font-size: clamp(22px, 3vw, 36px) !important;
+  }
+
+  #typing {
+    max-width: 820px !important;
+  }
+
+  .hero-description {
+    max-width: 760px !important;
+    min-height: 78px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  #matrixCanvas {
+    opacity: 0.32 !important;
+  }
+
+  .noise,
+  .scanline {
+    display: none !important;
+  }
+
+  .reports-page {
+    width: min(100% - 28px, var(--max)) !important;
+    padding-top: 100px !important;
+  }
+
+  .reports-grid-page {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .report-list-card-content,
+  .report-detail-panel,
+  .report-detail-card,
+  .report-aside-card,
+  .automation-featured-card,
+  .reports-mini-panel {
+    padding: 22px !important;
+  }
+
+  .report-detail-panel h1 {
+    font-size: clamp(32px, 11vw, 48px) !important;
+  }
+
+  .report-detail-card h2 {
+    font-size: clamp(30px, 10vw, 44px) !important;
+  }
+
+  .hero {
+    align-items: flex-start !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    padding-top: 112px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 15vw, 72px) !important;
+    text-align: left !important;
+  }
+
+  .terminal-line {
+    width: 100% !important;
+    height: 128px !important;
+    min-height: 128px !important;
+    max-height: 128px !important;
+
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    font-size: clamp(22px, 8vw, 32px) !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+  }
+
+  #typing {
+    max-width: 100% !important;
+    text-align: left !important;
+    letter-spacing: 1px !important;
+  }
+
+  .hero-description {
+    min-height: 130px !important;
+    display: block !important;
+    text-align: left !important;
+  }
+
+  .hero-actions {
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+
+  .btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .terminal-line {
+    height: 136px !important;
+    min-height: 136px !important;
+    max-height: 136px !important;
+    font-size: clamp(20px, 7.5vw, 28px) !important;
+  }
+
+  .hero-description {
+    min-height: 150px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  #matrixCanvas {
+    display: none !important;
+  }
+}
