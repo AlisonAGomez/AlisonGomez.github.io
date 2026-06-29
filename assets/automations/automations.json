@@ -42,7 +42,7 @@
       "Linux Shell",
       "Cron"
     ],
-    "repository": "https://github.com/AlisonAGomez",
+    "repository": "https://github.com/AlisonAGomez/dropbox-backup-auditor",
     "download": "",
     "preview": "",
     "details": {
@@ -98,7 +98,7 @@
       ],
       "result": "O resultado foi uma solução de auditoria operacional capaz de consolidar múltiplos clientes e ambientes em relatórios de fácil leitura, aumentando a confiabilidade, rastreabilidade e eficiência da rotina de backup."
     },
-    "repositoryLabel": "GitHub",
+    "repositoryLabel": "Ver no GitHub",
     "gallery": [
       {
         "title": "Menu principal do auditor",

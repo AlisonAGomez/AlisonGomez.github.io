@@ -65,8 +65,8 @@
       "Backup",
       "Automação"
     ],
-    "repository": "",
-    "repositoryLabel": "Repositório em breve",
+    "repository": "https://github.com/AlisonAGomez/dropbox-backup-auditor",
+    "repositoryLabel": "Ver no GitHub",
     "documentation": "",
     "details": {
       "overview": "Projeto de automação para auditoria operacional de backups de VMs, containers e arquivos, integrando evidências de Proxmox, Dropbox, rclone e relatórios técnicos.",
