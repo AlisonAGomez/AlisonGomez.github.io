@@ -47,7 +47,7 @@
         "Organização de projeto acadêmico com aplicação prática."
       ]
     },
-    "detailUrl": "project/?id=sinalyx"
+    "detailUrl": "projects/?id=sinalyx"
   },
   {
     "id": "auditoria-backups",
@@ -90,7 +90,7 @@
         "Criação de ferramenta para ambiente multiempresa."
       ]
     },
-    "detailUrl": "automation/?id=auditoria-backups-proxmox-dropbox"
+    "detailUrl": "automations/?id=auditoria-backups-proxmox-dropbox"
   },
   {
     "id": "beewatts",
@@ -130,7 +130,7 @@
         "Organização de interface para projeto acadêmico."
       ]
     },
-    "detailUrl": "project/?id=beewatts"
+    "detailUrl": "projects/?id=beewatts"
   },
   {
     "id": "veonyx",
@@ -215,6 +215,6 @@
         "Planejamento de produto inspirado em análise de concorrentes."
       ]
     },
-    "detailUrl": "project/?id=veonyx"
+    "detailUrl": "projects/?id=veonyx"
   }
 ]
