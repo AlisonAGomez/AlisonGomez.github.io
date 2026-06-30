@@ -15,8 +15,8 @@
       "TensorFlow",
       "pfSense"
     ],
-    "repository": "",
-    "repositoryLabel": "Repositório em breve",
+    "repository": "https://github.com/AlisonAGomez/sinalyx",
+    "repositoryLabel": "Ver no GitHub",
     "documentation": "",
     "details": {
       "overview": "O Sinalyx busca melhorar o fluxo de análise de logs de firewall, apoiando analistas de redes e segurança na detecção de anomalias, priorização de eventos e investigação técnica.",
