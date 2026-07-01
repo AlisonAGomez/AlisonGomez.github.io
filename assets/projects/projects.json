@@ -150,8 +150,8 @@
       "Redis",
       "MinIO"
     ],
-    "repository": "",
-    "repositoryLabel": "Repositório em breve",
+    "repository": "https://github.com/AlisonAGomez/veonyx",
+    "repositoryLabel": "Ver no GitHub",
     "documentation": "assets/docs/veonyx/veonyx-relatorio-portfolio.pdf",
     "details": {
       "overview": "O VeoNyx é um projeto de aplicativo mobile-first de comunidades digitais criado para fãs de anime, RPG, games, fandoms, arte e grupos criativos. A proposta é oferecer comunidades com identidade própria, perfis locais personalizados, posts, wikis, chats, loja estética e ferramentas de moderação.",
